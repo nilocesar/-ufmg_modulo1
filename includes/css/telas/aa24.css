@@ -1,0 +1,45 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA24 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                background-size: cover; */
+}
+
+.containerAA24 .baseFundoX {
+    background: url(../../img/aa24.png) no-repeat center;
+    background-size: content;
+}
+
+
+/* -------------------------------- 
+                            
+                            Main Components 
+                            
+                            -------------------------------- */
+
+.containerAA24 .titulo {
+    position: absolute;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.containerAA24 ul li {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.containerAA24 .sut {
+    position: absolute;
+    width: 1000px;
+}

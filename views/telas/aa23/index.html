@@ -1,0 +1,131 @@
+<script>
+    window["aa23"] = {
+        indice: "aa23",
+        status: false,
+        playerVimeo: null
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if (window["aa23"].playerVimeo != null) {
+            window["aa23"].playerVimeo.pause();
+        }
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa23").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            var iframe = _containerTela.find('iframe');
+            var player = new Vimeo.Player(iframe);
+            _tela.playerVimeo = player;
+            player.setCurrentTime(0);
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.find(".feed").css('display', 'none');
+                _containerTela.find(".fecharFeed").css('display', 'none');
+
+                _containerTela.find(".plusVideo").on('click', function() {
+                    _containerTela.find(".feed").css('display', 'flex');
+                });
+
+                _containerTela.find(".fecharFeed").on('click', function() {
+                    _containerTela.find(".feed").css('display', 'none');
+                    course.liberarNavegacao();
+                });
+
+                player.getAutopause().then(function(autopause) {
+                    console.log('carregou o inicio: ' + _tela.indice)
+                        //player.play();
+                }).catch(function(error) {
+                    console.log(error.name);
+                });
+
+                player.on('ended', function(data) {
+                    console.log('video 23 completo');
+                    _containerTela.find(".fecharFeed").css('display', 'flex');
+                });
+
+
+
+            } else {
+
+            }
+
+
+        }
+    })
+</script>
+
+
+<div class="containerAA23 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn size30 light" px="960" py="200">
+            <div class="animated fadeInUp delay0_8 vermelho size60">
+                Veja abaixo o que você aprendeu no curso de <br><span class="bold">Gestão de Riscos e Conformidade</span>:
+            </div>
+            <div class="animated fadeInUp delay1_0 mt20">
+                <ul>
+                    <li>
+                        gestão de riscos;
+                    </li>
+                    <li>
+                        riscos de acessos;
+                    </li>
+                    <li>
+                        riscos de acessos críticos;
+                    </li>
+                    <li>
+                        segregação de funções;
+                    </li>
+                    <li>
+                        controle compensatório;
+                    </li>
+                    <li>
+                        perfil de Acessos SAP.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="plusVideo posicionar animated fadeIn delay1_6 size30 light" px="1060" py="970">
+            <div class="plusX item item1" item=1>
+                <i class="fas fa-plus size40"></i>
+            </div>
+            <div class="txtD">
+                Para reforçar o seu aprendizado, assista ao vídeo.
+            </div>
+        </div>
+
+
+        <div class="feed feed1 posicionar animated fadeIn" px="0" py="0">
+
+            <div class="feedBase animated fadeInUp delay0_6">
+
+                <div class="fecharFeed animated zoomIn">
+                    <i class="fas fa-times size40"></i>
+                </div>
+
+                <iframe tabindex="3" src="https://player.vimeo.com/video/472804826" frameborder="0" allow="fullscreen" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="animated fadeIn delay0_6">     
+                </iframe>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>

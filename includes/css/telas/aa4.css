@@ -1,0 +1,139 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA4 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+            background-size: cover; */
+}
+
+.containerAA4 .baseFundo {
+    background: url(../../img/aa4.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+        
+        Main Components 
+        
+        -------------------------------- */
+
+.containerAA4 .lista {
+    position: absolute;
+    width: 1273px;
+    height: 560px;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    padding: 10px;
+}
+
+.containerAA4 .listaF {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerAA4 .item {
+    position: relative;
+    width: 25%;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.containerAA4 .btnAtual {
+    background-color: #F48C0F;
+    color: #fff;
+}
+
+.containerAA4 .circulo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.containerAA4 .item1 .circulo {
+    background: url(../../img/ico1AA4.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 .item2 .circulo {
+    background: url(../../img/ico2AA4.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 .item3 .circulo {
+    background: url(../../img/ico3AA4.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 .item4 .circulo {
+    background: url(../../img/ico4AA4.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 .baseFundoFeed {
+    position: absolute;
+    width: 1328px;
+    height: 747px;
+    border: 5px solid #33649E;
+    background-color: rgba(35, 34, 34, 0.8);
+}
+
+.containerAA4 .content {
+    position: absolute;
+    width: 1100px;
+    height: 600px;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA4 .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA4 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA4 .itx {
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.containerAA4 .txtSA {
+    padding: 20px;
+}

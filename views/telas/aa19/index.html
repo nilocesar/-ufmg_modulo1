@@ -1,0 +1,134 @@
+<script>
+    window["aa19"] = {
+        indice: "aa19",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa19").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            reset();
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+
+            }
+
+            function reset() {
+                _containerTela.find(".intX").addClass('visibleX animated fadeInUp');
+                _containerTela.find(".personXDInt").addClass('visibleX animated fadeInUp');
+                _containerTela.find(".plusX").css('display', 'flex');
+            }
+
+            function controle() {
+
+                _containerTela.find(".plusX").on('click', function() {
+
+                    $(this).css('display', 'none');
+                    _containerTela.find(".intX").removeClass('visibleX');
+                    _containerTela.find(".personXDInt").removeClass('visibleX');
+
+                    course.liberarNavegacao();
+
+                });
+
+            }
+
+
+
+
+        }
+    })
+</script>
+
+
+<div class="containerAA19 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn size30 light" px="130" py="166">
+
+            <div class="animated fadeInUp delay0_8 size60 bold vermelho">
+                Na prática, como ela funciona?
+            </div>
+            <div class="basX animated fadeInUp delay1_2 mt20 center">
+                <div class="pesonX">
+                    <div class="ti1 size22 intX">
+                        Uma função pode estar associada a diversos usuários.
+                    </div>
+                    <div class="personXD mt10">
+                        <div class="personXDInt"></div>
+                    </div>
+                </div>
+
+                <div class="setaX">
+                    <div class="ti1 size22">
+                        Cada usuário será associado a uma função.
+                    </div>
+                    <div class="setaXD mt10">
+                        <div class="plusX animated zoomIn">
+                            <i class="fas fa-plus size40"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funcaoX intX">
+                    <div class="ti1 size22">
+                        Cada função contém um grupo de microatividades.
+                    </div>
+                    <div class="funcaoXD mt10 bold size40 branco">
+                        Função
+                    </div>
+                </div>
+
+
+                <div class="litX bold intX">
+                    <div class="itxD">
+                        Microatividade 1
+                    </div>
+                    <div class="itxD">
+                        Microatividade 2
+                    </div>
+                    <div class="itxD">
+                        Microatividade 3
+                    </div>
+                </div>
+
+                <div class="blockX size30 branco left intX">
+                    <ul>
+                        <li>
+                            Caso uma microatividade seja adicionada a uma função, todos os usuários que estão relacionados a ela receberão esse acesso.
+                        </li>
+                        <li class="mt20">
+                            As microatividades podem estar em mais de uma função.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bseFGC animated fadeInUp delay1_0 intX">
+                Em caso de alteração na microatividade, todas as funções relacionadas herdarão as alterações realizadas.
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

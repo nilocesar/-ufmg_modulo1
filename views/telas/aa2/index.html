@@ -1,0 +1,60 @@
+<script>
+    window["aa2"] = {
+        indice: "aa2",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa2").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA2 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="372" py="262">
+            <div class="animated fadeInUp delay0_6 up size48 bold branco">
+                OBJETIVOS DO MÓDULO 4
+            </div>
+        </div>
+
+        <div class="list posicionar animated fadeIn" px="300" py="385">
+            <ul>
+                <li class="animated fadeInUp delay0_8">
+                    Desenvolver a capacidade crítica em face aos planos que reduzem a complexidade da situação <br>da exposição ao risco da infecção pelo vírus <br>SARS-CoV-2 no ambiente de trabalho.
+                </li>
+                <li class="animated fadeInUp delay1_0">
+                    Fortalecer os profissionais da saúde na busca de linhas de intervenção em nível sistêmico.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

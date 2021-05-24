@@ -1,0 +1,189 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA19 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                    background-size: cover; */
+}
+
+.containerAA19 .baseFundoX {
+    background: url(../../img/aa5.png) no-repeat center;
+    background-size: content;
+}
+
+.containerAA19 .titulo {
+    position: absolute;
+    width: 1647px;
+}
+
+.containerAA19 .basX {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.containerAA19 .pesonX {
+    position: relative;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA19 .personXD {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    background: url(../../img/person1AA19.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA19 .personXDInt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/person2AA19.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA19 .setaX {
+    position: relative;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.containerAA19 .setaXD {
+    position: relative;
+    width: 143px;
+    height: 106px;
+    background: url(../../img/setaAA19.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA19 .funcaoX {
+    position: relative;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.containerAA19 .ti1 {
+    position: relative;
+    width: 100%;
+}
+
+.containerAA19 .funcaoXD {
+    position: relative;
+    width: 100%;
+    height: 96px;
+    background-color: #ED1C24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA19 .litX {
+    position: relative;
+    width: 380px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    margin-top: 44px;
+}
+
+.containerAA19 .litX::before {
+    position: absolute;
+    content: "";
+    border-left: 4px solid #A7A9AC;
+    border-top: 4px solid #A7A9AC;
+    border-bottom: 4px solid #A7A9AC;
+    width: 25px;
+    height: 255px;
+    left: -25px;
+    top: 48px;
+}
+
+.containerAA19 .litX::after {
+    position: absolute;
+    content: "";
+    border-top: 4px solid #A7A9AC;
+    width: 59px;
+    left: -59px;
+    top: 176px;
+}
+
+.containerAA19 .itxD {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border: 4px solid #ED1C24;
+    color: #ED1C24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA19 .blockX {
+    position: relative;
+    height: 100%;
+    width: 500px;
+    background-color: #ED1C24;
+    padding: 20px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 44px;
+}
+
+.containerAA19 ul li {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+.containerAA19 .bseFGC {
+    position: relative;
+    width: 50%;
+    background-color: #fff;
+    border: 4px solid #ED1C24;
+    padding: 20px;
+    margin: 200px auto 0 auto;
+}
+
+.containerAA19 .visibleX {
+    display: none;
+}
+
+.containerAA19 .plusX {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #ED1C24;
+    cursor: pointer;
+    right: -100px;
+    top: 22.5px;
+}

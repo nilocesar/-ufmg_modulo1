@@ -1,0 +1,102 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA12 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                background-size: cover; */
+}
+
+.containerAA12 .baseFundo {
+    background: url(../../img/aa12.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+            
+            Main Components 
+            
+            -------------------------------- */
+
+.containerAA12 .tit {
+    position: absolute;
+    width: 837px;
+    overflow: hidden;
+}
+
+.containerAA12 .list {
+    position: absolute;
+    width: 1187px;
+}
+
+.containerAA12 .item {
+    position: relative;
+    width: 100%;
+    height: 166px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.containerAA12 .itemAtivo {
+    display: flex !important;
+}
+
+.containerAA12 .itemAtivo .ico {
+    pointer-events: none;
+}
+
+.containerAA12 .ico {
+    position: relative;
+    width: 387px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4988CD;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    padding: 30px;
+}
+
+.containerAA12 .icoAtivo {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.containerAA12 .txtD {
+    position: relative;
+    width: 740px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.containerAA12 .txF {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 2px solid #4988CD;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.containerAA12 .ico .fa-check {
+    display: none;
+    color: #528BDF;
+}
+
+.containerAA12 .ico .fa-plus {
+    color: #EC7A50;
+}

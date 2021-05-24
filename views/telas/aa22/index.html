@@ -1,0 +1,90 @@
+<script>
+    window["aa22"] = {
+        indice: "aa22",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa22").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+
+
+
+            } else {
+
+            }
+
+
+        }
+    })
+</script>
+
+
+<div class="containerAA22 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn size30 light" px="130" py="180">
+            <div class="animated fadeInUp delay0_8 vermelho bold size60">
+                Novo Modelo de Perfil de Acesso
+            </div>
+            <div class="animated fadeInUp delay1_0 mt20">
+                <div>
+                    Função composta = função com várias microatividades que contêm as transações.
+                </div>
+                <div class="mt20">
+                    Portanto, os novos acessos:
+                </div>
+            </div>
+            <div class="animated fadeInUp delay1_2 mt20">
+                <ul>
+                    <li>
+                        são baseados por função;
+                    </li>
+                    <li>
+                        possibilitam facilidade de manutenção;
+                    </li>
+                    <li>
+                        permitem agilidade na manutenção;
+                    </li>
+                    <li>
+                        requerem aprovação do dono da função.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="tabela posicionar animated fadeIn delay1_6" px="200" py="450">
+
+        </div>
+
+        <div class="titulo posicionar animated fadeIn size30 light center" px="130" py="975">
+            <div class="animated fadeInUp delay2_0 vermelho bold size30">
+                Os usuários pedem acesso às funções.
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

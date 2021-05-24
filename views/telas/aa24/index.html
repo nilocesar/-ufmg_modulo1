@@ -1,0 +1,63 @@
+<script>
+    window["aa24"] = {
+        indice: "aa24",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa24").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            course.completeScorm();
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+
+
+            } else {
+
+            }
+
+
+        }
+    })
+</script>
+
+
+<div class="containerAA24 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn size40 bold" px="130" py="342">
+
+            <div class="animated fadeInUp delay1_0">
+                Parabéns, você finalizou com sucesso o curso <span class="vermelho">Gestão de Riscos e Conformidade</span>!<br><br> Esperamos que todas as informações e os conceitos aprendidos aqui passem a fazer parte de seu dia a dia no trabalho!<br><br>                Contamos com você!
+            </div>
+
+        </div>
+
+
+        <div class="sut posicionar animated fadeIn size30 delay1_6" px="390" py="916">
+            Para sair do treinamento, clique no botão <i class="far fa-times-circle vermelho size35"></i> do seu navegador.
+        </div>
+
+
+
+
+    </div>
+
+</div>

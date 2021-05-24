@@ -1,0 +1,115 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA23 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                            background-size: cover; */
+}
+
+.containerAA23 .baseFundoX {
+    background: url(../../img/aa23.png) no-repeat center;
+    background-size: content;
+}
+
+
+/* -------------------------------- 
+                        
+                        Main Components 
+                        
+                        -------------------------------- */
+
+.containerAA23 .titulo {
+    position: absolute;
+    width: 830px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.containerAA23 ul li {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.containerAA23 .plusVideo {
+    position: absolute;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerAA23 .plusX {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #ED1C24;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.containerAA23 .txtD {
+    position: relative;
+    width: 440px;
+}
+
+.containerAA23 .feed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.776);
+    z-index: 99999999999999999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA23 .feedBase {
+    position: relative;
+    background-color: #ED1C24;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA23 .feedBase iframe {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+}
+
+.containerAA23 .fecharFeed {
+    position: absolute;
+    border: 3px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    width: 51px;
+    height: 51px;
+    top: 20px;
+    right: 20px;
+    z-index: 9999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA23 .fecharFeed:hover {
+    background-color: #fff;
+    color: #ED1C24;
+}

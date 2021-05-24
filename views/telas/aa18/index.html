@@ -1,0 +1,180 @@
+<script>
+    window["aa18"] = {
+        indice: "aa18",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa18").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            reset();
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+                controleFeed();
+
+
+            } else {
+
+            }
+
+            function reset() {
+                _containerTela.find(".feed").css('display', 'none');
+                _containerTela.find(".txDD").css('display', 'none');
+
+                _containerTela.find(".item").attr('ativo', 0);
+                _containerTela.find(".item").addClass('itemInativo');
+                _containerTela.find(".item1").removeClass('itemInativo');
+                _containerTela.find(".item .icoX").removeClass('animated infinite pulse');
+
+                //_containerTela.find(".item1 .icoX").addClass('animated infinite pulse');
+
+            }
+
+            function controleFeed() {
+
+                reset();
+
+                var _all = _containerTela.find(".item").length;
+                var _current = 0;
+
+
+                _containerTela.find(".item").on('click', function() {
+
+                    _current = $(this).attr('item');
+                    var _next = parseInt(_current) + 1;
+
+                    if ($(this).attr('ativo') == 0) {
+
+                        _containerTela.find(".item" + _current + " .txDD").css('display', 'block');
+                        _containerTela.find(".item" + _next).removeClass('itemInativo');
+
+                        _containerTela.find(".item" + _current + " .icoX").removeClass('animated infinite pulse');
+                        //_containerTela.find(".item" + _next + " .icoX").addClass('animated infinite pulse');
+
+                        $(this).attr('ativo', 1);
+
+                    }
+
+
+
+                    if (_current == _all) {
+                        course.liberarNavegacao();
+                    }
+
+                });
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA18 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn size30 light" px="130" py="166">
+
+            <div class="animated fadeInUp delay0_6 size60 bold vermelho">
+                Benefícios da Nova Estrutura de Acesso SAP
+            </div>
+            <div class="animated fadeInUp delay0_8 mt20">
+                Clique nas garrafas para conhecer os principais benefícios da nova estrutura de acesso através do SAP:
+            </div>
+        </div>
+
+
+        <div class="baseT posicionar animated fadeIn size22 light center" px="130" py="357">
+
+            <div class="bseTV animated fadeInUp delay1_0">
+
+                <div class="item item1" item=1>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Modelo alinhado com as melhores práticas para gerenciar os acessos de forma eficiente, de acordo com as funções, tarefas e atribuições dos usuários na organização.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item2" item=2>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Maior dinamismo e flexibilidade para concessão e revogação de acessos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item3" item=3>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Menor esforço para manutenção de perfis de acessos: um ajuste em uma função é ativado automaticamente para todos os usuários atribuídos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item4" item=4>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Definição de funções com mapeamento das respectivas atividades.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item5" item=5>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Nenhuma microatividade contém riscos de segregação de funções.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item6" item=6>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Maior facilidade e flexibilidade para manutenção das funções, pois muitas mudanças exigem apenas a atribuição de microatividades para a função.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item7" item=7>
+                    <div class="icoX"></div>
+                    <div class="txtX mt20">
+                        <div class="txDD animated zoomIn">
+                            Diminuição de acessos críticos em operações do dia a dia.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>

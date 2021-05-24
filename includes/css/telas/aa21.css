@@ -1,0 +1,110 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA21 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                            background-size: cover; */
+}
+
+.containerAA21 .baseFundoX {
+    /* background: url(../../img/aa20.png) no-repeat center;
+    background-size: content; */
+    background-color: #fff;
+}
+
+
+/* -------------------------------- 
+                        
+                        Main Components 
+                        
+                        -------------------------------- */
+
+.containerAA21 .titulo {
+    position: absolute;
+    width: 1660px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.containerAA21 .tabela {
+    position: absolute;
+    width: 1660px;
+    height: 770px;
+    background: url(../../img/tabelaAA21_3.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA21 .tabela {
+    position: absolute;
+    width: 1660px;
+}
+
+.containerAA21 .plusDD {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+}
+
+.containerAA21 .plusX {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #ED1C24;
+    cursor: pointer;
+}
+
+.containerAA21 .feed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.776);
+    z-index: 99999999999999999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA21 .feedBase {
+    position: relative;
+    width: 1280px;
+    height: 521px;
+    background-color: #ED1C24;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA21 .fecharFeed {
+    position: absolute;
+    border: 3px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    width: 51px;
+    height: 51px;
+    top: 20px;
+    right: 20px;
+    z-index: 9999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA21 .fecharFeed:hover {
+    background-color: #fff;
+    color: #ED1C24;
+}

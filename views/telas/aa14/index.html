@@ -1,0 +1,82 @@
+<script>
+    window["aa14"] = {
+        indice: "aa14",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa14").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA14 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="868" py="285">
+            <div class="animated fadeInUp delay0_6 up size50 bold azul1">
+                NO MÓDULO 4, O CURSISTA:
+            </div>
+            <div class="size26 mt30 list">
+                <div class="item animated fadeInUp delay0_8">
+                    <div class="icoX">
+                        <i class="fas fa-check size50 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Observou a diferença entre a abordagem sistêmica e a resposta que reduz a complexidade do problema.
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_0">
+                    <div class="icoX">
+                        <i class="fas fa-check size50 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Conheceu planos que apresentam linhas para agir sobre as diferentes dimensões da exposição ao risco da infecção por COVID-19.
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_2">
+                    <div class="icoX">
+                        <i class="fas fa-check size50 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Estudou o problema se inteirando de argumentos embasados.
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_4">
+                    <div class="icoX">
+                        <i class="fas fa-check size50 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Inteirou-se sobre a estrutura das mesas estaduais e municipais de negociação do SUS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

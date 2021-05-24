@@ -1,0 +1,109 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA18 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                    background-size: cover; */
+}
+
+.containerAA18 .baseFundoX {
+    /* background: url(../../img/aa5.png) no-repeat center;
+    background-size: content; */
+    background-color: #fff;
+}
+
+
+/* -------------------------------- 
+                
+                Main Components 
+                
+                -------------------------------- */
+
+.containerAA18 .baseImg {
+    position: absolute;
+    width: 964px;
+    height: 643px;
+}
+
+.containerAA18 .baseImg div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/img_aa5.png) no-repeat center;
+    background-size: content;
+}
+
+.containerAA18 .titulo {
+    position: absolute;
+    width: 1647px;
+}
+
+.containerAA18 .baseT {
+    position: absolute;
+    width: 1647px;
+}
+
+.containerAA18 .bseTV {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.containerAA18 .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 407px;
+    cursor: pointer;
+}
+
+.containerAA18 .icoX {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ED1C24;
+}
+
+.containerAA18 .icoX::after {
+    position: absolute;
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 94px;
+    left: 50%;
+    top: 50%;
+    margin-top: -47px;
+    margin-left: -18.5px;
+    background: url(../../img/cerveja2.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA18 .bseFGC {
+    position: relative;
+    width: 50%;
+    background-color: #fff;
+    border: 4px solid #000;
+    padding: 20px;
+    margin: 40px auto 0 auto;
+}
+
+.containerAA18 .txtX {
+    position: relative;
+    height: 200px;
+    padding: 10px;
+    /* background: blue; */
+}
