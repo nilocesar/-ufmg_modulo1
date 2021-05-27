@@ -38,7 +38,7 @@
 
 .containerAA10 .lista {
     position: absolute;
-    width: 1200px;
+    width: 700px;
 }
 
 .containerAA10 .item {
@@ -50,16 +50,27 @@
     margin-bottom: 20px;
 }
 
-.containerAA10 .point {
-    position: relative;
-    width: 5%;
-    font-size: 100px;
-    line-height: 40px;
-}
-
 .containerAA10 .text {
     position: relative;
-    width: 95%;
+    width: 100%;
+}
+
+.containerAA10 .itemBlock {
+    position: relative;
+    border-radius: 20px;
+    border: 5px solid #EC7A50;
+    width: 90%;
+    overflow: hidden;
+}
+
+.containerAA10 .itemBlock .tituloBlock {
+    position: relative;
+    background: #EC7A50;
+    padding: 20px;
+}
+
+.containerAA10 .itemBlock .subConteud {
+    padding: 10px;
 }
 
 .containerAA10 .barraData {
@@ -73,7 +84,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #6FEC83;
+    background: #FF9C85;
     border-top-right-radius: 200px;
 }
 
@@ -81,11 +92,12 @@
     position: relative;
     width: 90%;
     height: 100%;
-    background: #30BF58;
+    background: #EC7A50;
     border-top-right-radius: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 200px;
 }
 
 .containerAA10 .livro {
@@ -93,6 +105,14 @@
     width: 80px;
     height: 80px;
     background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA10 .imgX {
+    position: absolute;
+    width: 600px;
+    height: 748px;
+    background: url(../../img/img1AA10.png ) no-repeat center;
     background-size: contain;
 }
 

@@ -48,6 +48,10 @@
     color: #008565 !important;
 }
 
+.verde2 {
+    color: #21A540 !important;
+}
+
 .vermelho {
     color: #BF5636 !important;
 }
@@ -56,12 +60,24 @@
     color: #FF5900 !important;
 }
 
-.amarelo {
-    color: #FFEB34 !important;
+.laranja2 {
+    color: #EC7A50 !important;
 }
 
-.verde {
-    color: #1D9639 !important;
+.laranja3 {
+    color: #C1441E !important;
+}
+
+.laranja4 {
+    color: #CC6A00 !important;
+}
+
+.laranja5 {
+    color: #BA4A27 !important;
+}
+
+.amarelo {
+    color: #FFEB34 !important;
 }
 
 .verdeEscuro {

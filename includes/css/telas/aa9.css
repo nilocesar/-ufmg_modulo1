@@ -9,7 +9,7 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                background-size: cover; */
+                                background-size: cover; */
 }
 
 .containerAA9 .baseFundo {
@@ -19,46 +19,72 @@
 
 
 /* -------------------------------- 
-            
-            Main Components 
-            
-            -------------------------------- */
+                            
+                            Main Components 
+                            
+                            -------------------------------- */
 
-.containerAA9 .titulo {
+.containerAA9 .tit {
     position: absolute;
-    width: 602px;
+    width: 837px;
+    overflow: hidden;
 }
 
-.containerAA9 .mensagemBtn {
-    text-decoration: underline;
-    color: #fff;
-    cursor: pointer;
-}
-
-.containerAA9 .lista {
+.containerAA9 .bloco {
     position: absolute;
-    width: 602px;
-}
-
-.containerAA9 .item {
-    position: relative;
-    width: 100%;
+    width: 1311px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    margin: 20px 0;
+    align-items: center;
 }
 
-.containerAA9 .point {
+.containerAA9 .bloco .imgX {
     position: relative;
-    width: 10%;
-    font-size: 100px;
-    line-height: 40px;
+    width: 731px;
+    height: 432px;
+    background: url(../../img/img1AA9.png) no-repeat center;
+    background-size: contain;
 }
 
-.containerAA9 .text {
+.containerAA9 .bloco .txtX {
+    position: relative;
+    width: 520px;
+    padding: 20px;
+}
+
+.containerAA9 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
+    overflow: hidden;
+}
+
+.containerAA9 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FEC86E;
+    border-top-right-radius: 200px;
+}
+
+.containerAA9 .barraDataContent {
     position: relative;
     width: 90%;
+    height: 100%;
+    background: #F48C0F;
+    border-top-right-radius: 200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 50px;
+}
+
+.containerAA9 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
 }
 
 .containerAA9 .baseFundoFeed {
@@ -85,42 +111,13 @@
     padding: 70px;
     border-radius: 20px;
     overflow: hidden;
-}
-
-.containerAA9 video {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-
-.containerAA9 .placeholder {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../../../anexos/videoAA7.png) no-repeat center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerAA9 .placeholder i {
-    color: #ffffff;
-    font-size: 200px;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-
-.containerAA9 .placeholder i:hover {
-    color: #245CA0;
-    transform: scale(1.1);
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
 .containerAA9 .closeX {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0px;
+    right: 10px;
     color: #fff;
     font-size: 40px;
     cursor: pointer;
@@ -128,4 +125,23 @@
 
 .containerAA9 .closeX:hover {
     color: #33649E;
+}
+
+.containerAA9 .content .ytplayer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.containerAA9 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA9 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
 }

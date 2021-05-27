@@ -6,6 +6,8 @@
 
     $("body").on('navegacaoComplete', function() {
 
+
+
         if ((course.config[course.indice].id).toUpperCase() == ("aa16").toUpperCase()) {
 
             var _tela = window[course.config[course.indice].id];
@@ -18,56 +20,16 @@
                 img_W: course.width,
             });
 
-            reset();
-
             if (_tela.status == false) {
                 _tela.status = true;
 
-
-                controleFeed();
+                _containerTela.aba();
 
 
             } else {
 
             }
 
-            function reset() {
-                _containerTela.find(".feed").css('display', 'none');
-                _containerTela.find(".item").addClass('itemInativo');
-                _containerTela.find(".item1").removeClass('itemInativo');
-            }
-
-            function controleFeed() {
-
-                reset();
-
-                var _all = _containerTela.find(".item").length;
-                var _current = 0;
-
-
-                _containerTela.find(".item").on('click', function() {
-
-                    _current = $(this).attr('item');
-
-
-                    _containerTela.find(".feed" + _current).css('display', 'flex');
-
-                });
-
-
-                _containerTela.find(".fecharFeed").on('click', function() {
-                    _containerTela.find(".feed").css('display', 'none');
-
-                    var _next = parseInt(_current) + 1;
-
-                    _containerTela.find(".item" + _next).removeClass('itemInativo');
-
-                    if (_current == _all) {
-                        course.liberarNavegacao();
-                    }
-                });
-
-            }
         }
     })
 </script>
@@ -77,172 +39,83 @@
 
     <div class="containerGeral">
 
-        <div class="titulo posicionar animated fadeIn size30 light" px="130" py="230">
-            <div class="animated fadeInUp delay0_8 bold vermelho size60">
-                Nova Estrutura de<br>Acessos SAP
-            </div>
-            <div class="animated fadeInUp delay1_0 branco mt20">
-                Os acessos SAP são desenhados de acordo com boas práticas de segurança da informação para facilitar a administração e simplificar a gestão de acessos. No Grupo Petrópolis, foram adotados alguns conceitos para facilitar o entendimento e a aplicação. <br><br>                Clique nas tampinhas para saber mais:
-            </div>
-        </div>
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
 
-
-        <div class="baseT posicionar animated fadeIn size20 bold center" px="375" py="660">
-
-            <div class="bseTV">
-
-                <div class="item item1 animated zoomIn delay1_4" item=1>
-                    <div class="icoX">1</div>
-                    <div class="txtX mt5">
-                        TRANSAÇÃO
-                    </div>
-                </div>
-
-                <div class="item item3 animated zoomIn delay1_8" item=3>
-                    <div class="icoX">3</div>
-                    <div class="txtX mt5">
-                        NÍVEL ORGANIZACIONAL
-                    </div>
-                </div>
-
-                <div class="item item5 animated zoomIn delay2_2" item=5>
-                    <div class="icoX">5</div>
-                    <div class="txtX mt5">
-                        FUNÇÃO
-                    </div>
-                </div>
-
-                <div class="item item2 animated zoomIn delay1_6 mt20" item=2>
-                    <div class="icoX">2</div>
-                    <div class="txtX mt5">
-                        OBJETO DE AUTORIZAÇÃO
-                    </div>
-                </div>
-
-                <div class="item item4 animated zoomIn delay2_0 mt20" item=4>
-                    <div class="icoX">4</div>
-                    <div class="txtX mt5">
-                        MICROATIVIDADE
-                    </div>
-                </div>
-
-
-
-            </div>
-
-
-        </div>
-
-
-        <div class="feed feed1 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
-
-                <div class="feedInt light branco size35">
-                    <div class="bold size35 up">
-                        TRANSAÇÃO
-                    </div>
-                    <div class="mt20 size30">
-                        Código de acesso a telas para realizar determinada atividade no sistema SAP.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="feed feed2 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
-
-                <div class="feedInt light branco size35">
-                    <div class="bold size35 up">
-                        OBJETO DE AUTORIZAÇÃO
-                    </div>
-                    <div class="mt20 size30">
-                        Efetua o controle da transação para restrição e permissão das microatividades, por exemplo, criar lançamento para tipos de documentos, movimentos, entre outras restrições possíveis.
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="840">
+            <div class="barraDataInit animated fadeInLeftBig delay2_0 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay2_2 branco">
+                    <div class="livro mr30"></div>
+                    <div class="mt5 size24 itemDY">
+                        No momento, a abordagem diagnóstica da COVID-19 é do profissional de saúde (no hospital ou no ambulatório/consultório), ou do gestor de saúde para avaliar a população/grupo de risco
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="feed feed3 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
-
-                <div class="feedInt light branco size35">
-                    <div class="bold size35 up">
-                        NÍVEL ORGANIZACIONAL
-                    </div>
-                    <div class="mt20 size30">
-                        Permissões concedidas de acordo com as restrições de regras de negócio. Têm referência direta com a unidade organizacional, o centro de custos, a subárea de RH etc.
-                    </div>
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
                 </div>
             </div>
         </div>
 
-        <div class="feed feed4 posicionar animated fadeIn" px="0" py="0">
+        <div class="lista posicionar animated fadeIn size30" px="350" py="400">
 
-            <div class="feedBase animated fadeInUp delay0_6">
+            <div class="animated fadeInUp delay0_8 size32 bold verde2 mb10">
+                IMUNOLÓGICO
+            </div>
+            <div class="animated fadeInUp delay1_2 verde2">
+                Ensaio Imunoenzimático (<span class="book_italic">Enzyme-Linked Immunosorbent Assay</span> – ELISA), Imunocromatografia (teste rápido), Imunoensaio por Quimioluminescência (CLIA)
+            </div>
+        </div>
 
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
 
-                <div class="feedInt light branco size35">
-                    <div class="bold size35 up">
-                        MICROATIVIDADE
-                    </div>
-                    <div class="mt20 size30">
-                        <div>
-                            Conjunto de transações agrupadas por atividade, por exemplo:
+        <div class="aba posicionar animated fadeIn size30" px="350" py="530">
+            <div class="tabs animated fadeInUp delay1_2">
+                <div class="tabs__form">
+                    <div class="item item1" item=1>
+                        <label for="tabs1" class="tabs__label">O QUE É?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Verifica a resposta imunológica ao vírus detectada pela presença de anticorpos IgM e IgC.
+                            </div>
                         </div>
-                        <div class="mt20">
-                            <ul>
-                                <li>
-                                    microatividade 1: criar pedidos de compras;
-                                </li>
-                                <li>
-                                    microatividade 2: exibir pedidos de compras.
-                                </li>
-                            </ul>
+                    </div>
+
+                    <div class="item item2" item=2>
+                        <label for="tabs2" class="tabs__label">QUANDO É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                A partir da 2ª semana de doença, a quantidade de vírus diminui progressivamente e o indivíduo produz anticorpos contra o vírus, principalmente das classes IgG e IgM.
+                            </div>
                         </div>
+                    </div>
 
+                    <div class="item item3" item=3>
+                        <label for="tabs3" class="tabs__label">ONDE É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Sorologia tradicional é realizada em laboratório, com amostras de soro obtido após punção venosa. Os testes sorológicos estão disponíveis em Minas Gerais de acordo com solicitação médica ou ações das Secretarias de Saúde ou em testes rápidos (imunocromatográficos),
+                                realizados em sangue capilar obtido por punção digital.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item4" item=4>
+                        <label for="tabs4" class="tabs__label">PRINCIPAIS LIMITAÇÕES</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Preocupação quanto à indicação na fase aguda da infecção, pois detectam a infecção muito tardiamente no curso da doença (geralmente mais de 7 a 10 dias). Isso significa que o diagnóstico de COVID-19 baseado na detecção de anticorpos só será possível em
+                                uma fase de recuperação.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="feed feed5 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
-
-                <div class="feedInt light branco size35">
-                    <div class="bold size35 up">
-                        FUNÇÃO
-                    </div>
-                    <div class="mt20 size30">
-                        Agrupamento de microatividades relacionadas com as atribuições dos colaboradores executadas no sistema SAP, que devem estar alinhadas à rotina de trabalho.
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </div>

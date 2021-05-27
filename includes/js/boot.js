@@ -18,6 +18,10 @@ var PATH_CONFIG = "./data.xml";
             transit_jquery: "vendor/jquery.transit.min",
             easing_jquery: "vendor/jquery.easing.min",
             componentes_jquery: "vendor/componentes.jquery",
+
+            sanfona: "vendor/componentes/sanfona",
+            aba: "vendor/componentes/aba",
+
             highcharts: "vendor/highcharts",
             exporting: "vendor/exporting",
             export_data: "vendor/export-data",

@@ -6,6 +6,8 @@
 
     $("body").on('navegacaoComplete', function() {
 
+
+
         if ((course.config[course.indice].id).toUpperCase() == ("aa12").toUpperCase()) {
 
             var _tela = window[course.config[course.indice].id];
@@ -22,48 +24,37 @@
             if (_tela.status == false) {
                 _tela.status = true;
 
-                controle();
+
+                nav();
 
             } else {
-                _containerTela.find(".item1 .txF").removeClass('delay1_4')
-                _containerTela.find(".item1").removeClass('delay0_8')
-                _containerTela.find(".item1").addClass('delay0_4')
-                _containerTela.find(".item2").removeClass('delay2_0')
-                _containerTela.find(".item2").addClass('delay0_4')
 
             }
 
-            function controle() {
-
-                _containerTela.find(".item").css('display', 'none');
-                _containerTela.find(".txF").css('display', 'none');
-
-                nextInit(_containerTela.find(".item1"), 2);
-                _containerTela.find(".item2").addClass('delay2_0');
+            function nav() {
 
 
-                _containerTela.find(".item").on('click', function() {
 
-                    var _item = $(this).attr('item');
-                    var _next = parseInt($(this).attr('item')) + 1;
-                    var _all = _containerTela.find(".item").length;
+                var section = _containerTela.find(".flexbox-slide");
 
-                    nextInit($(this), _next);
+                function toggleAccordion() {
 
-                    if (_item == _all) {
+                    section.removeClass('activeSlide');
+                    $(this).addClass('activeSlide');
+                    $(this).attr('comp', 1);
+
+                    var _comp = true;
+                    section.each(function(indice, item) {
+                        if (!$(item).attr('comp'))
+                            _comp = false;
+                    });
+
+                    if (_comp) {
                         course.liberarNavegacao();
                     }
-
-                });
-
-                function nextInit(_item, _next) {
-
-                    _item.addClass('itemAtivo');
-                    _item.find('.ico').addClass('icoAtivo');
-                    _item.find('.ico').removeClass('animated infinite pulse');
-                    _item.find('.txF').css('display', 'flex');
-                    _containerTela.find(".item" + _next).css('display', 'flex')
                 }
+
+                section.on('click', toggleAccordion);
 
             }
         }
@@ -77,55 +68,40 @@
 
         <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
 
-        <div class="tit posicionar animated fadeIn" px="690" py="230">
-            <div class="branco right">
-                <div class="size48 animated fadeInRight delay0_4 bold">
-                    O QUE DIZ A OPAS
-                </div>
-                <div class="animated fadeInRight delay0_4 size35">
-                    (ORGANIZAÇÃO PAN-AMERICANA DA SAÚDE)
-                </div>
-            </div>
-        </div>
 
-        <div class="list posicionar animated fadeIn" px="400" py="390">
 
-            <div class="its size26">
-                <div class="item item1 animated fadeInUp delay0_8" item=1>
-                    <div class="ico animated infinite pulse up size26 bold center branco">
-
-                        MODELOS ALTERNATIVOS PARA A PRESTAÇÃO <br>DE CUIDADOS
-                    </div>
-                    <div class="txtD">
-                        <div class="txF animated fadeInLeft delay1_4">
-                            Intervenções para facilitar a troca e a ampliação de funções de forma segura por meio de formação rápida.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item item2 animated fadeInUp" item=2>
-                    <div class="ico animated infinite pulse up size26 bold center branco">
-                        COORDENAR TURNOS DOS PROFISSIONAIS DE SAÚDE
-                    </div>
-                    <div class="txtD">
-                        <div class="txF animated fadeInLeft">
-                            Para garantir a cobertura adequada e permitir um período de descanso para os trabalhadores com excesso de carga de trabalho.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item item3 animated fadeInUp delay0_4" item=3>
-                    <div class="ico animated infinite pulse up size26 bold center branco">
-                        HÁ TRABALHADORES DA SAÚDE QUE TÊM <br>VÁRIOS EMPREGOS
-                    </div>
-                    <div class="txtD">
-                        <div class="txF animated fadeInLeft">
-                            Considerar as consequências dessa multiplicidade de empregos: total de horas trabalhadas, risco de transferência de infecções entre estabelecimentos, etc.
-                        </div>
-                    </div>
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size48 animated fadeInLeft delay0_4 bold">
+                    SINTOMAS
                 </div>
             </div>
         </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="400">
+
+            <div class="item animated fadeInUp delay0_8">
+                A infecção pelo SARS-CoV-2 apresenta vários tipos de quadros clínicos. Existem casos assintomáticos e casos com manifestações clínicas leves. Existem também quadros de insuficiência respiratória, choque e disfunção de múltiplos órgãos.
+            </div>
+
+            <div class="list mt30">
+                <div class="itemX animated fadeIn delay1_4">
+                    <span class="bold laranja3">Sinais de agravamento:</span><br>
+                    <ul class="list-style: disc;">
+                        <li>
+                            Dispneia
+                        </li>
+                        <li>
+                            Hipoxemia
+                        </li>
+                    </ul>
+
+                    Essa situação pode levar à <span class="bold">hospitalização</span> do paciente.
+                </div>
+            </div>
+
+        </div>
+
 
 
     </div>

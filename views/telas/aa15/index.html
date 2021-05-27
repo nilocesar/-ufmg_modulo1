@@ -6,6 +6,8 @@
 
     $("body").on('navegacaoComplete', function() {
 
+
+
         if ((course.config[course.indice].id).toUpperCase() == ("aa15").toUpperCase()) {
 
             var _tela = window[course.config[course.indice].id];
@@ -18,14 +20,53 @@
                 img_W: course.width,
             });
 
-            course.completeScorm();
-
+            reset();
             if (_tela.status == false) {
                 _tela.status = true;
 
+                control()
 
 
             } else {
+
+            }
+
+            function control() {
+                _containerTela.find(".item .tabs__label").on('click', function() {
+
+                    var _parent = $(this).parent();
+                    var _item = parseInt(_parent.attr('item'));
+
+                    _parent.attr('ativo', 1);
+
+                    _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                    _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+
+                    _containerTela.find(".item" + _item + " .tabs__label").addClass('tabs__labelAtivo');
+                    _containerTela.find(".item" + _item + " .tabs__content").addClass('tabs__contentAtivo');
+
+                    var comp = true;
+                    _containerTela.find(".item").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo'))
+                            comp = false;
+
+                    });
+
+                    if (comp) {
+                        course.liberarNavegacao();
+                    }
+
+                });
+            }
+
+            function reset() {
+
+                _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+                _containerTela.find(".item1 .tabs__label").addClass('tabs__labelAtivo');
+                _containerTela.find(".item1 .tabs__content").addClass('tabs__contentAtivo');
+                _containerTela.find(".item1").attr('ativo', 1);
 
             }
         }
@@ -39,32 +80,33 @@
 
         <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
 
-        <div class="titulo posicionar animated fadeIn delay0_6" px="390" py="342">
-            <div class="animated fadeInRight delay0_8 size40 branco right">
-                <span>
-                    Esperamos que esta aprendizagem seja útil<br> para a construção de saídas sistêmicas<br> para transformar a vulnerabilidade dos<br> profissionais da saúde nos dias que correm.<br><br>
-                    <span class="bold">Até a próxima!</span>
-                </span>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
             </div>
         </div>
 
-        <div class="lista posicionar animated fadeIn" px="745" py="805">
-            <div class="item item1 animated zoomIn delay0_8">
-                <a href="https://www.medicina.ufmg.br" target="_blank" rel="nofollow"></a>
+        <div class="lista posicionar animated fadeIn size30" px="350" py="470">
+
+            <div class="animated fadeInUp delay0_8 size32 bold verde2 mb20">
+                IMUNOLÓGICO
             </div>
-            <div class="item item2 animated zoomIn delay1_0">
-                <a href="https://fapemig.br/pt" target="_blank" rel="nofollow"></a>
+            <div class="animated fadeInUp delay1_2 verde2 mb20">
+                Ensaio Imunoenzimático (<span class="book_italic">Enzyme-Linked Immunosorbent Assay</span> – ELISA), Imunocromatografia (teste rápido), Imunoensaio por Quimioluminescência (CLIA)
             </div>
-            <div class="item item3 animated zoomIn delay1_2">
-                <a href="https://www.medicina.ufmg.br/mps" target="_blank" rel="nofollow"></a>
+            <div class="animated fadeInUp delay1_0">
+                Os testes sorológicos de detecção de anticorpos IgM, IgA e/ou IgG verificam a resposta imunológica do indivíduo em relação ao vírus SARS-CoV-2, podendo diagnosticar doença ativa ou pregressa, por isso são indicados a partir do 8º dia do início dos sintomas.
+                Mesmo validados, é importante saber que os testes rápidos apresentam importantes limitações e a principal delas é que precisa ser realizado, de forma geral, a partir do 8º dia do início dos sintomas.
             </div>
-            <div class="item item4 animated zoomIn delay1_4">
-                <a href="https://www.medicina.ufmg.br/cins" target="_blank" rel="nofollow"></a>
-            </div>
-            <div class="item item5 animated zoomIn delay1_6">
-                <a href="https://www.medicina.ufmg.br/nest" target="_blank" rel="nofollow"></a>
-            </div>
+
         </div>
+
+
+
     </div>
 
 </div>

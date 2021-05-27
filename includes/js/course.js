@@ -2,7 +2,7 @@ define(['jquery', 'jquery_scorm', 'modernizr', 'imagesloaded',
     'velocity', 'componentes_jquery', "transform2d_jquery", "transform3d_jquery",
     "transit_jquery", "easing_jquery", 'detectmobilebrowser',
     'highcharts', 'exporting', 'export_data', 'print',
-    'TweenMax', 'TimelineMax', 'd3', "slick", 'blast'
+    'TweenMax', 'TimelineMax', 'd3', "slick", 'blast', 'sanfona', 'aba'
 ], function($) {
 
     'use strict';

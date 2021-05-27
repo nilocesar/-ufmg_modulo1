@@ -18,57 +18,15 @@
                 img_W: course.width,
             });
 
-            reset()
 
             if (_tela.status == false) {
                 _tela.status = true;
-
-
-                controleFeed();
 
 
 
             } else {
 
             }
-
-            function reset() {
-                _containerTela.find(".feed").css('display', 'none');
-                _containerTela.find(".item").addClass('animated infinite pulse');
-
-            }
-
-            function controleFeed() {
-
-                var _all = _containerTela.find(".item").length;
-                var _current = 0;
-
-
-                _containerTela.find(".item").on('click', function() {
-
-                    _current = $(this).attr('item');
-                    _containerTela.find(".feed" + _current).css('display', 'flex');
-
-                    _containerTela.find(".item").removeClass('animated infinite pulse');
-
-                });
-
-
-                _containerTela.find(".fecharFeed").on('click', function() {
-                    _containerTela.find(".feed").css('display', 'none');
-
-                    var _next = parseInt(_current) + 1;
-
-                    _containerTela.find(".item" + _next).removeClass('itemInativo');
-
-                    if (_current == _all) {
-                        course.liberarNavegacao();
-                    }
-                });
-
-            }
-
-
         }
     })
 </script>
@@ -78,50 +36,27 @@
 
     <div class="containerGeral">
 
-        <div class="titulo posicionar animated fadeIn size30 light" px="130" py="150">
-            <div class="animated fadeInUp delay0_8 vermelho bold size60">
-                Novo Modelo de Perfil de Acesso
-            </div>
-            <div class="animated fadeInUp delay1_0 mt10">
-                Função composta = função com várias microatividades que contêm as transações.
-            </div>
-            <div class="animated fadeInUp delay1_2 mt10 size22">
-                Neste modelo, foram definidas as funções e as microatividades que as compõem. <br><br>Premissas:<br> 1. dentro de uma microatividade, não deve existir risco de segregação de função;<br> 2. todas as microatividades da rotina de trabalho
-                devem estar na função.
-            </div>
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
 
-        </div>
-
-        <div class="tabela posicionar animated fadeIn delay1_6" px="130" py="276">
-
-        </div>
-
-
-        <div class="plusDD posicionar animated fadeIn delay2_0" px="1646" py="850">
-            <div class="plusX item item1" item=1>
-                <i class="fas fa-plus size40"></i>
+        <div class="titulo posicionar animated fadeIn" px="372" py="250">
+            <div class="animated fadeInUp delay0_6 up size48 bold branco">
+                TRATAMENTO
             </div>
         </div>
 
-
-        <div class="feed feed1 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed">
-                    <i class="fas fa-times size40"></i>
-                </div>
-
-                <div class="feedInt light branco size35">
-                    <div class="size30">
-                        Neste modelo, as transações necessárias à atividade “Criar Pedidos” estão em um único perfil de microatividade, que será utilizado em quantas funções diferentes necessitarem de tal atividade. Isso implica facilidade na administração das funções, nos testes
-                        de acessos em caso de projetos, agilidade no atendimento de solicitações das áreas e assertividade na solução dada devido à simplicidade no processo.
-                    </div>
-                </div>
+        <div class="list posicionar animated fadeIn" px="372" py="455">
+            <div class="size32 bold laranja4 mb50 animated fadeInUp delay0_8">
+                MEDIDAS DE SUPORTE
             </div>
+            <ul>
+                <li class="animated fadeInUp delay1_0">
+                    Tratamento da hipoxemia e do choque.
+                </li>
+                <li class="animated fadeInUp delay1_2">
+                    Controle de funções fisiológicas, como a função renal, e demais complicações.
+                </li>
+            </ul>
         </div>
-
-
 
     </div>
 

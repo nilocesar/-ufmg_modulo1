@@ -1,15 +1,12 @@
 <script>
     window["aa23"] = {
         indice: "aa23",
-        status: false,
-        playerVimeo: null
+        status: false
     }
 
     $("body").on('navegacaoComplete', function() {
 
-        if (window["aa23"].playerVimeo != null) {
-            window["aa23"].playerVimeo.pause();
-        }
+
 
         if ((course.config[course.indice].id).toUpperCase() == ("aa23").toUpperCase()) {
 
@@ -23,44 +20,15 @@
                 img_W: course.width,
             });
 
-            var iframe = _containerTela.find('iframe');
-            var player = new Vimeo.Player(iframe);
-            _tela.playerVimeo = player;
-            player.setCurrentTime(0);
-
             if (_tela.status == false) {
                 _tela.status = true;
 
-                _containerTela.find(".feed").css('display', 'none');
-                _containerTela.find(".fecharFeed").css('display', 'none');
-
-                _containerTela.find(".plusVideo").on('click', function() {
-                    _containerTela.find(".feed").css('display', 'flex');
-                });
-
-                _containerTela.find(".fecharFeed").on('click', function() {
-                    _containerTela.find(".feed").css('display', 'none');
-                    course.liberarNavegacao();
-                });
-
-                player.getAutopause().then(function(autopause) {
-                    console.log('carregou o inicio: ' + _tela.indice)
-                        //player.play();
-                }).catch(function(error) {
-                    console.log(error.name);
-                });
-
-                player.on('ended', function(data) {
-                    console.log('video 23 completo');
-                    _containerTela.find(".fecharFeed").css('display', 'flex');
-                });
-
+                _containerTela.aba();
 
 
             } else {
 
             }
-
 
         }
     })
@@ -71,58 +39,73 @@
 
     <div class="containerGeral">
 
-        <div class="titulo posicionar animated fadeIn size30 light" px="960" py="200">
-            <div class="animated fadeInUp delay0_8 vermelho size60">
-                Veja abaixo o que você aprendeu no curso de <br><span class="bold">Gestão de Riscos e Conformidade</span>:
-            </div>
-            <div class="animated fadeInUp delay1_0 mt20">
-                <ul>
-                    <li>
-                        gestão de riscos;
-                    </li>
-                    <li>
-                        riscos de acessos;
-                    </li>
-                    <li>
-                        riscos de acessos críticos;
-                    </li>
-                    <li>
-                        segregação de funções;
-                    </li>
-                    <li>
-                        controle compensatório;
-                    </li>
-                    <li>
-                        perfil de Acessos SAP.
-                    </li>
-                </ul>
-            </div>
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
 
-        </div>
-
-        <div class="plusVideo posicionar animated fadeIn delay1_6 size30 light" px="1060" py="970">
-            <div class="plusX item item1" item=1>
-                <i class="fas fa-plus size40"></i>
-            </div>
-            <div class="txtD">
-                Para reforçar o seu aprendizado, assista ao vídeo.
-            </div>
-        </div>
-
-
-        <div class="feed feed1 posicionar animated fadeIn" px="0" py="0">
-
-            <div class="feedBase animated fadeInUp delay0_6">
-
-                <div class="fecharFeed animated zoomIn">
-                    <i class="fas fa-times size40"></i>
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="840">
+            <div class="barraDataInit animated fadeInLeftBig delay1_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay2_0 branco">
+                    <div class="livro mr30"></div>
+                    <div class="mt5 size24 itemDY">
+                        <div class="bold size30">
+                            SAIBA MAIS
+                        </div>
+                        <a href="https://coronavirus.msf.org.br/desafios-da-vacina/" target="_blank" rel="nofollow">
+                            Os Desafios da Vacina  
+                        </a>
+                    </div>
                 </div>
-
-                <iframe tabindex="3" src="https://player.vimeo.com/video/472804826" frameborder="0" allow="fullscreen" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="animated fadeIn delay0_6">     
-                </iframe>
             </div>
         </div>
 
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size40 animated fadeInUp delay0_4 bold">
+                    VACINAS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="450">
+            <div class="animated fadeInUp delay0_8">
+                As vacinas são classificadas em três gerações tecnológicas:
+            </div>
+        </div>
+
+
+        <div class="aba posicionar animated fadeIn size30" px="350" py="500">
+            <div class="tabs animated fadeInUp delay1_2">
+                <div class="tabs__form">
+                    <div class="item item1" item=1>
+                        <label for="tabs1" class="tabs__label">1ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                São produzidas a partir de agentes infecciosos inativados ou atenuados.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item2" item=2>
+                        <label for="tabs2" class="tabs__label">2ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                São produzidas a partir de antígenos do agente infeccioso (partes ou proteínas do agente que têm importância no mecanismo de infecção e manifestação da doença).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item3" item=3>
+                        <label for="tabs3" class="tabs__label">3ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Também conhecidas como vacinas de DNA ou de mRNA (RNA mensageiro), não utilizam qualquer parte do agente infeccioso, apenas sequências de genes contendo as instruções para a replicação de um antígeno imunizante no organismo humano.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 

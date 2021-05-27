@@ -6,6 +6,8 @@
 
     $("body").on('navegacaoComplete', function() {
 
+
+
         if ((course.config[course.indice].id).toUpperCase() == ("aa17").toUpperCase()) {
 
             var _tela = window[course.config[course.indice].id];
@@ -18,60 +20,14 @@
                 img_W: course.width,
             });
 
-            reset();
-
+            //reset();
             if (_tela.status == false) {
                 _tela.status = true;
 
-
-                controleFeed();
+                //control()
 
 
             } else {
-
-            }
-
-            function reset() {
-
-                _containerTela.find(".lineXX").css('display', 'none');
-                _containerTela.find(".txtX").css('display', 'none');
-                _containerTela.find(".item").addClass('itemInativo');
-                _containerTela.find(".item1").removeClass('itemInativo');
-                _containerTela.find(".plusX").css('display', 'flex');
-                //_containerTela.find(".item1 .plusX").addClass('animated infinite pulse')
-            }
-
-            function controleFeed() {
-
-                reset();
-
-                var _all = _containerTela.find(".item").length;
-                var _current = 0;
-
-
-                _containerTela.find(".item").on('click', function() {
-
-                    var _current = $(this).attr('item');
-                    var _next = parseInt(_current) + 1;
-
-                    $(this).find(".plusX").css('display', 'none');
-                    $(this).find(".txtX").css('display', 'flex');
-
-                    _containerTela.find(".item" + _next).removeClass('itemInativo');
-                    //_containerTela.find(".item" + _next + " .plusX").addClass('animated infinite pulse');
-
-                    if (_current == _all) {
-
-                        _containerTela.find(".lineXX").css('display', 'block');
-
-                        setTimeout(function() {
-                            course.liberarNavegacao();
-                        }, 1000 * 1.4);
-
-                    }
-
-                });
-
 
             }
         }
@@ -83,74 +39,28 @@
 
     <div class="containerGeral">
 
-        <div class="titulo posicionar animated fadeIn" px="130" py="176">
-            <div class="animated fadeInUp delay0_8 vermelho bold size60">
-                Estrutura de Acessos SAP
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
             </div>
         </div>
 
+        <div class="lista posicionar animated fadeIn size30" px="350" py="430">
 
-        <div class="basX posicionar size30 light" px="170" py="280">
-
-            <div class="item item1 animated fadeInUp delay1_0" item="1">
-                <div class="blockX center mr30 bold">
-                    Função Organizacional
-                </div>
-                <div class="plusX">
-                    <i class="fas fa-plus size40"></i>
-                </div>
-                <div class="txtX blockX animated zoomIn size25">
-                    <div class="subTxtx">
-                        Atividade realizada pelo usuário dentro da organização. O perfil por função tem por objetivo criar um modelo para prover e administrar privilégios de acesso em uma organização. Neste modelo, cria-se o perfil de acesso baseado na função que o colaborador
-                        exerce dentro da organização.
-                    </div>
-                    <div class="box vermelho bold size30 center">
-                        Caixa de UND
-                    </div>
-                </div>
+            <div class="animated fadeInUp delay1_2 verde2 mb20 bold">
+                Teste imunocromatográfico para pesquisa de antígeno viral em amostras do trato respiratório superior:
             </div>
-
-            <div class="item item2 animated fadeInUp" item="2">
-                <div class="blockX blockX2 center mr30 bold">
-                    Microatividade
-                </div>
-                <div class="plusX">
-                    <i class="fas fa-plus size40"></i>
-                </div>
-                <div class="txtX blockX2 animated zoomIn size26">
-                    <div class="subTxtx subTxtx2">
-                        Conjunto de transações agrupadas por atividade, por exemplo: <br>- microatividade 1: criar pedidos de compras;<br>- microatividade 2: exibir pedidos de compras.
-                    </div>
-                    <div class="box branco bold size30 center">
-                        Recebimento <br>de dinheiro
-                        <div class="lineXX line1X animated zoomIn delay1_4"></div>
-                        <div class="lineXX line2X animated zoomIn delay1_4"></div>
-                    </div>
-                </div>
+            <div class="animated fadeInUp delay1_0">
+                O teste com pesquisa de antígenos do COVID-19 pode ser utilizado para diagnóstico na fase aguda da doença (janela do 2º ao 7º dia após início dos sintomas). Esse tipo de teste ainda não tem a sensibilidade e a especificidade desejadas. Pode ser utilizado
+                na indisponibilidade dos testes moleculares, ou quando este for negativo <br>(ex.: coleta inapropriada ou fora da fase aguda da doença).
             </div>
-
-            <div class="item item3 animated fadeInUp" item="3">
-                <div class="blockX blockX3 center mr30 bold">
-                    Transação
-                </div>
-                <div class="plusX">
-                    <i class="fas fa-plus size40"></i>
-                </div>
-                <div class="txtX blockX3 animated zoomIn size26">
-                    <div class="subTxtx">
-                        Código de acesso a telas para realizar determinada atividade no sistema SAP.
-                    </div>
-                    <div class="box preto bold size30 center">
-                        ZSFIRE
-                    </div>
-                </div>
-            </div>
-
-
 
         </div>
-
-
 
 
 
